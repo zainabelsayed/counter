@@ -1,16 +1,23 @@
 import "./App.css";
 import Counter from "./components/Counter";
-import Controls from "./components/controls";
-import { useState } from "react";
+import Shop from "./components/Shop";
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import ProductDetails from "./components/ProductDetails";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
-  const [counter, setCounter] = useState(0);
   return (
-    <div className="background d-flex align-items-center card-img-overlay">
-      <div className="container mx-auto text-center border w-25  p-5  rounded border-2">
-        <Counter counter={counter} />
-        <Controls setCounter={setCounter} counter={counter} />
-      </div>
+    <div>
+      <Router>
+      <NavBar />
+        <Switch>
+          <Route path="/" component={Home} exact/>
+          <Route path="/counter" component={Counter} />
+          <Route path="/shop" component={Shop} exact/>
+          <Route path="/shop/:id" component={ProductDetails}/>
+        </Switch>
+      </Router>
     </div>
   );
 }
