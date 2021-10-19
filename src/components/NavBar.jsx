@@ -2,8 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function NavBar() {
+    
+    const activate = (e)=>{
+        let nav = document.getElementById('nav').children
+        nav = Array.from(nav)
+        nav.map(elem=>elem.classList.remove('active'))
+        e.target.classList.add('active')
+    }
   return (
-    <nav className="navbar navbar-expand-lg navbar navbar-dark bg-dark fixed-top">
+    <nav className="navbar navbar-expand-lg navbar navbar-dark bg-dark fixed-top" >
       <div className="container">
         <Link className="navbar-brand" to="/">
           E-Shopping
@@ -20,14 +27,14 @@ export default function NavBar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
-            <Link className="nav-link active" aria-current="page" to="/">
+          <div className="navbar-nav" id="nav">
+            <Link className="nav-link" aria-current="page" to="/" onClick={(e)=>activate(e)}>
               Home
             </Link>
-            <Link className="nav-link" to="/counter">
+            <Link className="nav-link" to="/counter" onClick={(e)=>activate(e)}>
               Counter
             </Link>
-            <Link className="nav-link" to="/shop">
+            <Link className="nav-link" to="/shop" onClick={(e)=>activate(e)}>
               Shop
             </Link>
           </div>
