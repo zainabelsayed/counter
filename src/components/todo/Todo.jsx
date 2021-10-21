@@ -53,13 +53,15 @@ export default function Todo() {
           </div>
         </div>
       </form>
+      <div className="mt-5">
       {toDos.length > 0 ? (
         toDos.map((todo,index) => (
           <TodoList todo={todo} key={todo.id} index={index}/>
         ))
       ) : (
-        <h3 className='mt-5'>Todo List Is Empty</h3>
+        <h3 className=' text-secondary'>Todo List Is Empty</h3>
       )}
+      </div>
     </div>
   );
 }
