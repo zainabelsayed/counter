@@ -1,9 +1,10 @@
 import "./App.css";
-import Counter from "./components/Counter";
-import Shop from "./components/Shop";
-import NavBar from "./components/NavBar";
-import Home from "./components/Home";
-import ProductDetails from "./components/ProductDetails";
+import Counter from "./components/counter/Counter";
+import Shop from "./components/e-commerce/Shop";
+import NavBar from "./components/navbar/NavBar";
+import Home from "./components/home/Home";
+import ProductDetails from "./components/e-commerce/ProductDetails";
+import Todo from "./components/todo/Todo";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/counter" component={Counter} />
           <Route path="/shop" component={Shop} exact/>
           <Route path="/shop/:id" component={ProductDetails}/>
+          <Route path="/todo" component={Todo}/>
         </Switch>
       </Router>
     </div>

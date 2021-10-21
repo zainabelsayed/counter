@@ -14,7 +14,7 @@ export default function Shop() {
       .then((json) => setProducts(json));
   };
   return (
-    <div className="mt-5 pt-5 row justify-content-center">
+    <div className="mt-5 pt-5 row row-cols-1 row-cols-md-3 g-4 justify-content-center">
       {products ? (
         products.map((product) => (
           <Product product={product} key={product.id} />
