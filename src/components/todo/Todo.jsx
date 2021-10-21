@@ -22,11 +22,13 @@ export default function Todo() {
 
   return (
     <div className="mt-5 pt-5 text-start container w-50 mx-auto">
-        <h1 className="text-secondary mb-4">Todo App
+      <h1 className="text-secondary mb-4">
+        Todo App
         <FontAwesomeIcon
           className="fs-1 text-success ms-3"
           icon={faCheckCircle}
-        /></h1>
+        />
+      </h1>
       <form onSubmit={(e) => addTodo(e)}>
         <div className="mb-3">
           <label className="form-label">Title</label>
@@ -54,13 +56,13 @@ export default function Todo() {
         </div>
       </form>
       <div className="mt-5">
-      {toDos.length > 0 ? (
-        toDos.map((todo,index) => (
-          <TodoList todo={todo} key={todo.id} index={index}/>
-        ))
-      ) : (
-        <h3 className=' text-secondary'>Todo List Is Empty</h3>
-      )}
+        {toDos.length > 0 ? (
+          toDos.map((todo, index) => (
+            <TodoList todo={todo} key={todo.id} index={index} />
+          ))
+        ) : (
+          <h3 className=" text-secondary">Todo List Is Empty</h3>
+        )}
       </div>
     </div>
   );

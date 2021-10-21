@@ -12,7 +12,7 @@ export const addTodoAction = (payload) => {
 };
 
 export const deleteTodoAction = (payload) => {
-    console.log(payload)
+  console.log(payload);
   return {
     type: DELETE_TODO,
     payload,
@@ -28,8 +28,8 @@ const intialState = {
 //reducer
 
 const addTodoReducer = (state = intialState, action) => {
-    const index = state.todos.indexOf(action.payload)
-    console.log(index,state.todos)
+  const index = state.todos.indexOf(action.payload);
+  console.log(index, state.todos);
   switch (action.type) {
     case ADD_TODO:
       return { ...state.todos, todos: [...state.todos, action.payload] };
