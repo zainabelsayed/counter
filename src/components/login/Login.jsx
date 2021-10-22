@@ -1,13 +1,3 @@
-<<<<<<< Updated upstream
-import React from 'react'
-
-export default function Login() {
-    return (
-        <div className="mt-5 pt-5">
-            Login Page
-        </div>
-    )
-=======
 import React from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
@@ -83,5 +73,4 @@ export default function Login() {
       </button>
     </form>
   );
->>>>>>> Stashed changes
 }
