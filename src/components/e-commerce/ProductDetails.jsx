@@ -5,7 +5,7 @@ export default function ProductDetails({ match }) {
   const id = match.params.id;
   useEffect(() => {
     return fetchProduct();
-  }, []);
+  });
 
   const fetchProduct = () => {
     return fetch(`https://fakestoreapi.com/products/${id}`)
