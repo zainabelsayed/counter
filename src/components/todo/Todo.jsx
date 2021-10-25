@@ -38,6 +38,7 @@ export default function Todo() {
             value={title}
             aria-describedby="emailHelp"
             onChange={(e) => setTitle(e.target.value)}
+            required
           />
         </div>
         <div className="mb-3">
@@ -48,6 +49,7 @@ export default function Todo() {
               className="form-control w-50"
               value={content}
               onChange={(e) => setContent(e.target.value)}
+              required
             />
             <button type="submit" className="btn btn-success ms-3">
               Add Todo
