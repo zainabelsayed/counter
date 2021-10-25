@@ -17,8 +17,8 @@ export default function controls(props) {
     }
     return (
         <div className="container mx-auto">
-            <div className="btn btn-success m-2 fs-2 px-3 fw-bold" onClick={increase}>+</div>
-            <div className="btn btn-danger m-2 fs-2 px-3 fw-bold" onClick={decrease}>-</div>
+            <div className="btn btn-success m-2 fs-5 px-3 fw-bold" onClick={increase}>+ Increase</div>
+            <div className="btn btn-danger m-2 fs-5 px-3 fw-bold" onClick={decrease}>- Decrease</div>
         </div>
     )
 }
